@@ -1,13 +1,13 @@
 <template name="layout">
   {{#HeaderFooterLayout size="[undefined,undefined]" headerSize="50" footerSize="50"}}
     {{#Surface target="header" class="header"}}
-        Header
+      Header
     {{/Surface}}
-    {{#Surface target="content" class="main-content"}}
-        Content
+    {{#Surface target="content" class="content"}}
+    {{>yield}}
     {{/Surface}}
     {{#Surface target="footer" class="footer"}}
-        Footer
+      Footer
     {{/Surface}}
   {{/HeaderFooterLayout}}
 </template>

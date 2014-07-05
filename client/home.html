@@ -1,11 +1,45 @@
-<template name="home">
-  <div>
-    <div> Your Content </div>
-    <div> Your Content </div>
-    <div> Your Content </div>
-    <div> Your Content </div>
-    <div> Your Content </div>
-    <div> Your Content </div>
-    <div> Your Content </div>
-  </div>
+<template name="views_RenderController">
+  {{#Scrollview size="[undefined,undefined]"}}
+    {{#View size="[undefined,780]" translate="[0,0]"}}
+      {{#RenderController transition=getTransition size="[undefined,undefined]" translate="[0,0]"}}
+        {{>showTemplate name=currentTemplate}}
+      {{/RenderController}}
+    {{/View}}
+  {{/Scrollview}}
+</template>
+
+<template name="home1">
+  {{#Surface origin="[0,0]" size="[undefined,undefined]"}}
+  <div class="full"><img src="http://placekitten.com/1920/1080" class="img-responsive" /></div>
+  {{/Surface}}
+</template>
+
+<template name="home2">
+  {{#Surface origin="[0,0]" size="[undefined,undefined]"}}
+  <div class="full"><img src="http://placekitten.com/1920/1082" class="img-responsive" /></div>
+  {{/Surface}}
+</template>
+
+<template name="home3">
+  {{#Surface origin="[0,0]" size="[undefined,undefined]"}}
+  <div class="full"><img src="http://placekitten.com/1920/1083" class="img-responsive" /></div>
+  {{/Surface}}
+</template>
+
+<template name="home4">
+  {{#Surface origin="[0,0]" size="[undefined,undefined]"}}
+  <div class="full"><img src="http://placekitten.com/1920/1084" class="img-responsive" /></div>
+  {{/Surface}}
+</template>
+
+<template name="home5">
+  {{#Surface origin="[0,0]" size="[undefined,undefined]"}}
+  <div class="full"><img src="http://placekitten.com/1920/1085" class="img-responsive" /></div>
+  {{/Surface}}
+</template>
+
+<template name="home6">
+  {{#Surface origin="[0,0]" size="[undefined,undefined]"}}
+  <div class="full"><img src="http://placekitten.com/1920/1086" class="img-responsive" /></div>
+  {{/Surface}}
 </template>

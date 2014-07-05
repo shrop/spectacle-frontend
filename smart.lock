@@ -4,7 +4,9 @@
     "basePackages": {
       "iron-router": {},
       "famono": {},
-      "famous-components": {}
+      "famous-components": {},
+      "less-bootstrap-3": {},
+      "font-awesome-4-less": {}
     },
     "packages": {
       "iron-router": {
@@ -21,6 +23,16 @@
         "git": "https://github.com/gadicc/meteor-famous-components.git",
         "tag": "v0.0.15",
         "commit": "371bb247a45ee3c446202b38680be53d5229118d"
+      },
+      "less-bootstrap-3": {
+        "git": "https://github.com/DerMambo/less-bootstrap-3.git",
+        "tag": "v0.0.1",
+        "commit": "1321ac0ebc809bc354186b96f4c28b7042e38507"
+      },
+      "font-awesome-4-less": {
+        "git": "https://github.com/svub/fontawesome4-less.git",
+        "tag": "v4.4.0",
+        "commit": "250d2336a217c18eb70e9d074784a7db3ca38472"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
