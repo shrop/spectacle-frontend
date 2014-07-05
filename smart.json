@@ -1,5 +1,7 @@
 {
   "packages": {
-    "iron-router": {}
+    "iron-router": {},
+    "famono": {},
+    "famous-components": {}
   }
 }
