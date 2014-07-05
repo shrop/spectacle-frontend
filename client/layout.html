@@ -1,7 +1,13 @@
 <template name="layout">
-  <div class="container-fluid">
-    <div class="row text-center">
-      {{> yield}}
-    </div>
-  </div>
+  {{#HeaderFooterLayout size="[undefined,undefined]" headerSize="50" footerSize="50"}}
+    {{#Surface target="header" class="header"}}
+        Header
+    {{/Surface}}
+    {{#Surface target="content" class="main-content"}}
+        Content
+    {{/Surface}}
+    {{#Surface target="footer" class="footer"}}
+        Footer
+    {{/Surface}}
+  {{/HeaderFooterLayout}}
 </template>
