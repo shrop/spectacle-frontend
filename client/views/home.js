@@ -1,4 +1,4 @@
-Session.setDefault('currentTemplate', 'home1');
+Session.setDefault('currentTemplate', 'content6');
 Session.setDefault('currentTransition', 'opacity');
 
 Template.views_RenderController.currentTemplate = function() {
@@ -16,9 +16,12 @@ Template.views_RenderController.helpers({
 
 function changeImage() {
   var textArray = [
-    'home1',
-    'home2',
-    'home3'
+    'content1',
+    'content2',
+    'content3',
+    'content4',
+    'content5',
+    'content6'
   ];
 
   var currentTemplate = Session.get('currentTemplate');
@@ -31,4 +34,4 @@ function changeImage() {
   return Session.set('currentTemplate', textArray[randomNumber]);
 }
 
-Meteor.setInterval(changeImage, 5000);
+Meteor.setInterval(changeImage, 20000);

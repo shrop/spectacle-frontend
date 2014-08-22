@@ -1,13 +1,5 @@
 <template name="layout">
-  {{#HeaderFooterLayout size="[undefined,undefined]" headerSize="121" footerSize="121" class="hfl"}}
-    {{#Surface target="header" class="header"}}
-    {{/Surface}}
     {{#Surface target="content" class="content"}}
     {{>yield}}
     {{/Surface}}
-    {{#Surface target="footer" class="footer"}}
-      <img src="images/logo.png" class="logo" />
-      <img src="images/footer-weather.png" class="weather" />
-    {{/Surface}}
-  {{/HeaderFooterLayout}}
 </template>
