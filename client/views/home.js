@@ -1,9 +1,10 @@
-Session.setDefault('currentTemplate', 'content6');
+Session.setDefault('currentTemplate', 'content1');
 Session.setDefault('currentTransition', 'opacity');
+Session.setDefault('slideDefaultInterval', 5000);
 
 Template.views_RenderController.currentTemplate = function() {
   return Session.get('currentTemplate');
-}
+};
 
 Template.views_RenderController.helpers({
   'showTemplate': function() {
@@ -11,11 +12,18 @@ Template.views_RenderController.helpers({
   },
   'getTransition': function() {
     return Session.get('currentTransition');
-  },
+  }
 });
 
-function changeImage() {
-  var textArray = [
+Template.views_RenderController.rendered = function () {
+  Deps.autorun(function () {
+    var currentTemplate = Session.get('currentTemplate');
+    changeImage(currentTemplate);
+  });
+};
+
+function getContentNames() {
+  return [
     'content1',
     'content2',
     'content3',
@@ -23,15 +31,34 @@ function changeImage() {
     'content5',
     'content6'
   ];
-
-  var currentTemplate = Session.get('currentTemplate');
-  var randomNumber = Math.floor(Math.random()*textArray.length);
-
-  while (textArray[randomNumber] === currentTemplate) {
-    var randomNumber = Math.floor(Math.random()*textArray.length);
-  }
-
-  return Session.set('currentTemplate', textArray[randomNumber]);
 }
 
-Meteor.setInterval(changeImage, 20000);
+function getCustomIntervals() {
+  return {
+    content6: 5.5 * 60 * 1000
+  };
+}
+
+function setCustomInterval(contentName) {
+  var customIntervals = getCustomIntervals();
+  if (contentName in customIntervals) {
+    return customIntervals[contentName];
+  }
+  return 5000;
+}
+
+function getRandomTemplateName() {
+  var textArray = getContentNames();
+  var randomNumber = Math.floor(Math.random()*textArray.length);
+  return textArray[randomNumber];
+}
+
+function changeImage(currentTemplate) {
+  var randomTemplate = getRandomTemplateName();
+
+  while (randomTemplate === currentTemplate) {
+    randomTemplate = getRandomTemplateName();
+  }
+  var timeout = setCustomInterval(currentTemplate);
+  setTimeout(function () { Session.set('currentTemplate', randomTemplate) }, timeout);
+}
