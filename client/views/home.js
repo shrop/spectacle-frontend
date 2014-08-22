@@ -34,4 +34,5 @@ function changeImage() {
   return Session.set('currentTemplate', textArray[randomNumber]);
 }
 
-Meteor.setInterval(changeImage, 20000);
+var slideDefaultInterval = Session.get('slideDefaultInterval');
+Meteor.setInterval(changeImage, slideDefaultInterval);
