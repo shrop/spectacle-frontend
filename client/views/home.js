@@ -35,7 +35,7 @@ function getContentNames() {
 
 function getCustomIntervals() {
   return {
-    content6: 5.5 * 60 * 1000
+    content6: 15000 //5.5 * 60 * 1000
   };
 }
 
