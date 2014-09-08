@@ -6,9 +6,10 @@
 standard-app-packages
 insecure
 jquery
-iron-router
-famono
-famous-components
 less
-less-bootstrap-3
-font-awesome-4-less
+iron:router
+raix:famono
+gadicohen:famous-components
+manuelschoebel:less-bootstrap-3
+mrt:font-awesome-4-less
+
