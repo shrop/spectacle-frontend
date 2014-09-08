@@ -35,7 +35,7 @@ function getContentNames() {
 
 function getCustomIntervals() {
   return {
-    content6: 15000 //5.5 * 60 * 1000
+    content6: 60000 //5.5 * 60 * 1000
   };
 }
 
@@ -44,7 +44,7 @@ function setCustomInterval(contentName) {
   if (contentName in customIntervals) {
     return customIntervals[contentName];
   }
-  return 5000;
+  return 30000;
 }
 
 function getRandomTemplateName() {
