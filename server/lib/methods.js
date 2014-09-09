@@ -1,5 +1,5 @@
 Meteor.methods({
-  addPost: function (text) {
-    Posts.insert({text: text});
+  addPost: function (data) {
+    console.log(data);
   }
 });
