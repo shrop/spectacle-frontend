@@ -60,5 +60,7 @@ function changeImage(currentTemplate) {
     randomTemplate = getRandomTemplateName();
   }
   var timeout = setCustomInterval(currentTemplate);
-  setTimeout(function () { Session.set('currentTemplate', randomTemplate) }, timeout);
+  setTimeout(function () {
+    Session.set('currentTemplate', randomTemplate);
+  }, timeout);
 }
