@@ -5,8 +5,7 @@ Meteor.methods({
       Posts.insert(data);
     }
     else {
-      Posts.update(data);
+      Posts.update({"node.nid": data.node.nid},{$set:{node:data.node}});
     }
-    console.log(data.node.nid);
   }
 });
