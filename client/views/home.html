@@ -1,9 +1,11 @@
-<template name="views_RenderController">
-  {{#Scrollview size="[undefined,undefined]"}}
-    {{#View size="[undefined,undefined]" translate="[0,0]"}}
-      {{#RenderController transition=getTransition size="[undefined,undefined]" translate="[0,0]"}}
-        {{>showTemplate name=currentTemplate}}
-      {{/RenderController}}
-    {{/View}}
-  {{/Scrollview}}
+<template name="rotate">
+  {{#RenderController size="[undefined,undefined]"}}
+    {{> item}}
+  {{/RenderController}}
+</template>
+
+<template name="item">
+	{{#Surface class="red-bg" align="[0,0]" origin="[0,0]" size="[75,150]"}}
+		<div class="full">#1</div>
+	{{/Surface}}
 </template>
