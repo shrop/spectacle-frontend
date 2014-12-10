@@ -1,0 +1,21 @@
+<template name="postItem">
+  <div class="post">
+    <div class="post-content">
+      <h3><a href="{{pathFor 'postPage'}}">{{node/title}}</a></h3>
+      {{#if node/original/field_post_image}}
+        <div class="image">
+          <a href="http://spectacle.jfraz/sites/default/files/{{node/original/field_post_image/und/[0]/filename}}" class="swipebox" title="<image-title>"><img src="http://spectacle.jfraz/sites/default/files/{{node/original/field_post_image/und/[0]/filename}}" alt title="{{node/field_post_image/und/[0]/title}}"/></a>
+        </div>
+      {{/if}}
+      {{#if node/field_post_youtube}}
+        <div class="video">
+          <a href="{{node/field_post_youtube/und/[0]/video_url}}">{{node/field_post_youtube/und/[0]/video_url}}
+          </a>
+        </div>
+      {{/if}}
+      {{#if node/field_post_text}}
+        <i class="text">{{node/field_post_text/und/[0]/value}}</i>
+      {{/if}}
+    </div>
+  </div>
+</template>

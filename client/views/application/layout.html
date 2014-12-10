@@ -1,3 +1,10 @@
 <template name="layout">
-    {{>yield}}
+  <div class="container {{currentTemplate}}">
+    {{> header}}
+    <div id="main" class="row-fluid">
+      {{#momentum plugin='left-to-right'}}
+        {{> yield}}
+      {{/momentum}}
+    </div>
+  </div>
 </template>
