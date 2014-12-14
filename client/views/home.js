@@ -27,15 +27,13 @@ function getContentNames() {
     'content1',
     'content2',
     'content3',
-    'content4',
-    'content5',
-    'content6'
+    'content4'
   ];
 }
 
 function getCustomIntervals() {
   return {
-    content6: 15000 //5.5 * 60 * 1000
+    content1: 15000 //5.5 * 60 * 1000
   };
 }
 

@@ -1,0 +1,129 @@
+body {
+  background:#eee;
+  color:#666
+}
+
+/* Navbar */
+.navbar-default {
+  background: rgba(0,0,0,.65);
+  border: none;
+  color: #999;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 0 5%;
+  top: 0;
+  transition: top 0.2s ease;
+  -webkit-border-radius:0 0 3px 3px;
+  -moz-border-radius:0 0 3px 3px;
+  -ms-border-radius:0 0 3px 3px;
+  -o-border-radius:0 0 3px 3px;
+  border-radius:0 0 3px 3px
+}
+.home .navbar-default {
+  top: -52px;
+}
+.home .container:hover .navbar-default {
+  top: 0;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav > li > a:hover {
+  color: #fff;
+}
+
+/* Posts */
+.post {
+  *zoom:1;
+  position:relative;
+  opacity:1;
+  background:#fff;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  -ms-border-radius:3px;
+  -o-border-radius:3px;
+  border-radius:3px;
+  padding:10px;
+  margin-bottom:10px;
+  -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.15);
+  -moz-box-shadow:0 1px 1px rgba(0,0,0,0.15);
+  box-shadow:0 1px 1px rgba(0,0,0,0.15)
+}
+.post:before,.post:after {
+  content:"";
+  display:table
+}
+.post:after {
+  clear:both
+}
+.post .image {
+  max-height: 300px;
+  overflow: hidden;
+}
+.post .image img {
+  max-width: 100%;
+  width: 98%;
+  margin-left: 1%;
+  opacity: .75;
+  transition:all 200ms 0 ease-in
+}
+.post .image img:hover  {
+  opacity: 1;
+}
+.posts, .post-page {
+  overflow: auto;
+}
+.posts .spinner-container {
+  position:relative;
+  height:100px
+}
+#spinner {
+  height:300px
+}
+
+
+/* Errors and Alerts */
+.jumbotron {
+  text-align:center
+}
+.jumbotron h2 {
+  font-size:60px;
+  font-weight:100
+}
+@-webkit-keyframes fadeOut {
+  0% {opacity:0}
+  10% {opacity:1}
+  90% {opacity:1}
+  100% {opacity:0}
+}
+@keyframes fadeOut {
+  0% {opacity:0}
+  10% {opacity:1}
+  90% {opacity:1}
+  100% {opacity:0}
+}
+.errors {
+  position:fixed;
+  z-index:10000;
+  padding:10px;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  pointer-events:none
+}
+.alert {
+  animation:fadeOut 2700ms ease-in 0 1 forwards;
+  -webkit-animation:fadeOut 2700ms ease-in 0 1 forwards;
+  -moz-animation:fadeOut 2700ms ease-in 0 1 forwards;
+  width:250px;
+  float:right;
+  clear:both;
+  margin-bottom:5px;
+  pointer-events:auto
+}
+
+
+/* Famo.us overrides */
+.famous-container, .famous-group {
+  /* for navbar visibility */
+  z-index: -1;
+}
